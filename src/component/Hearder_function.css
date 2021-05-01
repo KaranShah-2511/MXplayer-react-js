@@ -1,0 +1,23 @@
+.Container{
+    max-width: 40%;
+}
+.icon{
+    padding-top: 20px;
+    color:rgb(32, 35, 179);
+}
+.icon:hover{
+    color: rgb(9, 255, 0);
+}
+
+.title{
+    margin-top: 3px;;
+    color:rgb(5, 0, 75);
+    font-size: 20px;
+    font-family:sans-serif ;
+    font-weight: bold;
+    
+}
+.title:hover{
+    color: red;
+}
+
