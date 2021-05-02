@@ -1,26 +1,57 @@
 import React from "react";
 import styled from "styled-components";
 import SearchIcon from "@material-ui/icons/Search";
-import Hearder_function from "./Hearder_function";
-import HomeIcon from "@material-ui/icons/Home";
-import BackupIcon from "@material-ui/icons/Backup";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import ContactsIcon from "@material-ui/icons/Contacts";
+import MenuIcon from "@material-ui/icons/Menu";
+import SettingsIcon from "@material-ui/icons/Settings";
 
 function Header() {
   return (
     <Container>
-      <h1>ClickStock</h1>
-      <Search>
-        <SearchInput />
-        <SearchIcon />
-      </Search>
-      <Header_flex>
-        <Hearder_function title="Home" Icon={HomeIcon} />
-        <Hearder_function title="Upload" Icon={BackupIcon} />
-        <Hearder_function title="Logout" Icon={ExitToAppIcon} />
-        <Hearder_function title="Contact" Icon={ContactsIcon} />
-      </Header_flex>
+      <Logo src="./image/mxplayer.png" />
+      <a>
+        MX<span>PLAYER</span>
+      </a>
+
+      <NavMenu>
+        <a>
+          <span>HOME</span>
+        </a>
+        <a>
+          <span> WEBSHOW</span>
+        </a>
+        <a>
+          <span>MOVIES</span>
+        </a>
+        <a>
+          <span>TV</span>
+        </a>
+        <a>
+          <span>NEWS</span>
+        </a>
+        <a>
+          <span>MUSIC</span>
+        </a>
+        <a>
+          <span>BUZZ</span>
+        </a>
+        <a>
+          <span>LIVETV</span>
+        </a>
+      </NavMenu>
+
+      <Extra>
+        <a>
+          <SearchIcon />
+        </a>
+
+        <a>
+          <MenuIcon />
+          <span>MY WATCHLIST</span>
+        </a>
+        <a>
+          <SettingsIcon />
+        </a>
+      </Extra>
     </Container>
   );
 }
@@ -28,31 +59,49 @@ function Header() {
 export default Header;
 
 const Container = styled.div`
-  h1 {
-    display: flex;
-    justify-content: center;
+  background-color: #1c2939;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: static;
+  a {
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+    padding: 0 15px;
+  }
+  span {
+    font-weight: normal;
   }
 `;
 
-const SearchInput = styled.input`
-  width: 50%;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 3px solid red;
-  font-size: 25px;
+const Logo = styled.img`
+  height: 38px;
 `;
 
-const Search = styled.div`
+const NavMenu = styled.div`
+  margin-left: 100px;
+  flex: 1;
   display: flex;
-  justify-content: center;
-`;
-const Header_flex = styled.div`
-  max-width: 100%;
-  display: flex;
-  justify-content: space-around;
+  align-items: center;
 
-  :hover {
-    color: red;
+  a {
+    font-size: 15px;
+    font-weight: bold;
+  }
+`;
+
+const Extra = styled.div`
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+
+  a {
+    display: flex;
+    align-items: center;
+  }
+
+  span {
+    font-size: 15px;
   }
 `;
