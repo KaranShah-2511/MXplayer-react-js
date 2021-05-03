@@ -8,16 +8,16 @@ function Header() {
   return (
     <Container>
       <Logo src="./image/mxplayer.png" />
-      <a>
+      <a className="logo">
         MX<span>PLAYER</span>
       </a>
 
       <NavMenu>
         <a>
-          <span>HOME</span>
+          <span className="active">HOME</span>
         </a>
         <a>
-          <span> WEBSHOW</span>
+          <span> WEB SHOW</span>
         </a>
         <a>
           <span>MOVIES</span>
@@ -68,7 +68,7 @@ const Container = styled.div`
     font-weight: bold;
     color: white;
     font-size: 20px;
-    padding: 0 15px;
+    padding: 0 0px;
   }
   span {
     font-weight: normal;
@@ -77,17 +77,31 @@ const Container = styled.div`
 
 const Logo = styled.img`
   height: 38px;
+  padding: 0 0 0 10px;
 `;
 
 const NavMenu = styled.div`
-  margin-left: 100px;
+  margin-left: 70px;
   flex: 1;
   display: flex;
   align-items: center;
+  letter-spacing: 0.3px;
+  cursor: pointer;
 
+  .active {
+    color: white;
+  }
   a {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: bold;
+    color: hsla(0, 0%, 100%, 0.5);
+    font-family: Muli, sans-serif;
+    letter-spacing: 0.3px;
+    padding: 0 20px;
+
+    &:hover {
+      color: white;
+    }
   }
 `;
 
@@ -95,10 +109,12 @@ const Extra = styled.div`
   display: flex;
   align-items: center;
   margin-right: 25px;
+  cursor: pointer;
 
   a {
     display: flex;
     align-items: center;
+    padding: 0 20px;
   }
 
   span {
